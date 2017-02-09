@@ -47,9 +47,6 @@ class BubblesortForm extends FormBase {
       '#min' => 1,
       '#max' => 99,
     );
-    //$form['#validate'][] = '_number_range_validate';
-    //$form['actions']['submit']['#validate'][] = '_number_range_validate';
-
     $form['submit'] = array(
       '#type' => 'submit',
       '#value' => $this->t('Shuffle'),
