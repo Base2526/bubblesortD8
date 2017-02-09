@@ -42,14 +42,14 @@ class BubblesortForm extends FormBase {
       '#min' => 1,
       '#max' => 35,
     );
-    $form['number1'] = array(
+    $form['integer_min'] = array(
       '#type' => 'number',
       '#title' => $this->t('First number:'),
       '#required' => TRUE,
       '#min' => 1,
       '#max' => 99,
     );
-    $form['number2'] = array(
+    $form['integer_max'] = array(
       '#type' => 'number',
       '#title' => $this->t('Second number:'),
       '#required' => TRUE,
@@ -81,8 +81,8 @@ class BubblesortForm extends FormBase {
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
-    if ($values['number2'] <= $values['number1']) {
-      $form_state->setErrorByName('number2', t('Second number must be greater than the first number.'));
+    if ($values['integer_max'] <= $values['integer_min']) {
+      $form_state->setErrorByName('integer_max', t('Second number must be greater than the first number.'));
     }
   }
 
@@ -92,10 +92,10 @@ class BubblesortForm extends FormBase {
    * {@inheritDoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    drupal_set_message($this->t('@total bars between @first and @second', array(
+    drupal_set_message($this->t('@total bars between @min and @max', array(
       '@total' => $form_state->getValue('numbers_total'),
-      '@first' => $form_state->getValue('number1'),
-      '@second' => $form_state->getValue('number2'),
+      '@min' => $form_state->getValue('integer_min'),
+      '@max' => $form_state->getValue('integer_max'),
       )));
     $form_state->setRebuild();
   }

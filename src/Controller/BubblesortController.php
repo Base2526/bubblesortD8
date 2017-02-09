@@ -38,11 +38,11 @@ class BubblesortController extends ControllerBase {
               $total = $field[1];;
               break;
 
-            case 'number1':
+            case 'integer_min':
               $range1 = $field[1];
               break;
 
-            case 'number2':
+            case 'integer_max':
               $range2 = $field[1];
               break;
           }
