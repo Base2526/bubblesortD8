@@ -1,0 +1,14 @@
+bubblesort.form:
+  path: '/bubblesort'
+  defaults:
+    _title: 'Bubble Sort'
+    _form: '\Drupal\bubblesort\Form\BubblesortForm'
+  requirements:
+    _permission: 'access content'
+bubblesort.bubblesort_json:
+  path: '/bubblesort/json/{data}'
+  defaults:
+    _title: 'Bubble JSON'
+    _controller: '\Drupal\bubblesort\Controller\BubblesortController::bubblesort_json'
+  requirements:
+    _permission: 'access content'
