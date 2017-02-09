@@ -9,6 +9,6 @@ bubblesort.bubblesort_json:
   path: '/bubblesort/json/{data}'
   defaults:
     _title: 'Bubble JSON'
-    _controller: '\Drupal\bubblesort\Controller\BubblesortController::bubblesort_json'
+    _controller: '\Drupal\bubblesort\Controller\BubblesortController::bubblesortJson'
   requirements:
     _permission: 'access content'

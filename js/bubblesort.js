@@ -95,7 +95,7 @@
           return b - a;
         });
 
-        data = $.merge( newdata, data );
+        data = $.merge(newdata, data);
 
         // Redraw bar chart with sorted pieces
         j = d3.scale.linear()
@@ -121,7 +121,7 @@
           }
         });
         for (i = indexToRemove; i < finalIndex; i++) {
-          $('.chart > div:eq('+i+')').css('background-color', 'green').addClass('sorted');
+          $('.chart > div:eq(' + i + ')').css('background-color', 'green').addClass('sorted');
         }
 
         // If sorting is finished, exit
