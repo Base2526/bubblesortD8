@@ -41,7 +41,7 @@ class BubblesortController extends ControllerBase {
           }
         }
       }
-      // Sort the numbers.
+      // Generate the random numbers within range.
       $numbers = $this->numbers_generate($total, $range1, $range2, false);
     }
     // Return a response as JSON.
