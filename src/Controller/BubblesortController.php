@@ -49,7 +49,7 @@ class BubblesortController extends ControllerBase {
   }
 
   /**
-   * Sorts the parameters in descending order.
+   * Generates random numbers between delimiters.
    *
    * @param integer $total
    *   The total number of bars.
