@@ -65,12 +65,6 @@ class BubblesortForm extends FormBase {
     return $form;
   }
 
-  public function _number_range_validate(array &$form, FormStateInterface $form_state) {
-    if ($form_state->getValue('number2') <= $form_state->getValue('number1')) {
-      $form_state->setErrorByName('number2', t('Second number must be greater than the first number.'));
-    }
-  }
-
   /**
    * {@inheritDoc}
    */
