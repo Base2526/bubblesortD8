@@ -19,6 +19,14 @@
         stop = true;
       });
 
+      $('#edit-step-button').click(function() {
+        return false;
+      });
+
+      $('#edit-play-button').click(function () {
+        return false;
+      });
+
       // Send form inputs for server-side processing
       function bubblesort_ajax(formvalues) {
         $.ajax({

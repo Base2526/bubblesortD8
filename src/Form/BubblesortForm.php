@@ -63,12 +63,10 @@ class BubblesortForm extends FormBase {
     $form['step_button'] = array(
       '#type' => 'button',
       '#value' => $this->t('Step'),
-      '#attributes' => array('onclick' => 'return (false);'),
     );
     $form['play_button'] = array(
       '#type' => 'button',
       '#value' => $this->t('Play'),
-      '#attributes' => array('onclick' => 'return (false);'),
     );
 
     return $form;
